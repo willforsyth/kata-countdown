@@ -1,0 +1,34 @@
+default:
+ - 'serve'
+
+serve:
+ - 'clean:server'
+ - 'svgstore'
+ - 'regenerate'
+ - 'connect'
+ - 'watch'
+
+build:
+ - 'clean:dist'
+ - 'svgstore'
+ - 'jekyll:dist'
+ - 'sass:dist'
+ - 'postcss:dist'
+ - 'browserify:dist'
+ - 'requirejs'
+ - 'modernizr'
+ - 'concat:ie8'
+ - 'copy:dist'
+ - 'uglify'
+ - 'processhtml'
+ - 'svg2png:dist'
+ - 'htmlmin'
+
+regenerate:
+ - 'jekyll:dev'
+ - 'sass:dev'
+ - 'postcss:dev'
+ - 'browserify:dev'
+ - 'copy:images'
+ - 'copy:fonts'
+ - 'svg2png:dev'
