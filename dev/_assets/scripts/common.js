@@ -6,3 +6,7 @@ var $ = global.window.$ = window.jQuery = require('../../../bower_components/jqu
 // ----------
 require('./components/testPlugin');
 $('body').logWidth();
+
+require('../../../bower_components/underscore/underscore-min');
+require('./components/countdown');
+$('body').countdown();
